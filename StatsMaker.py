@@ -4,7 +4,12 @@ import pandas as pd
 CURRENT_YEAR = 2020
 
 def getGameResults(team1, team2, week):
-    return None
+    weekly_games = (Boxscores(week, CURRENT_YEAR)).games
+    for game_week in weekly_games:
+        for game in game_week[game_week]:
+            if game['away_abbr'] == team1 and game['home_abbr'] == team2:
+                return game
+
 
 def getSeasonStatsForGame(team1, team2, week):
     return False
@@ -27,4 +32,3 @@ if __name__ == "__main__":
     #buf_at_lv = getSeasonStatsForGame('BUF', 'LV', 4)
 
     #chi_at_car = getSeasonStatsForGame('CHI', 'CAR', 5)
-
