@@ -29,6 +29,13 @@ if __name__ == "__main__":
         print("jeezoos... read a f'n book")
 
     ## We will get to these later...
-    #buf_at_lv = getSeasonStatsForGame('BUF', 'LV', 4)
-
-    #chi_at_car = getSeasonStatsForGame('CHI', 'CAR', 5)
+    buf_at_lv = getSeasonStatsForGame('BUF', 'LV', 4)
+    if buf_points['points'] == 93 and LV_points == 88:
+        print('good')
+    else:
+        print('no good')
+    chi_at_car = getSeasonStatsForGame('CHI', 'CAR', 6)
+    if chi_points == 106 and car_points == 156:
+        print('good')
+    else:
+        print('no good')
