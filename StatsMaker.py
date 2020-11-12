@@ -6,7 +6,7 @@ CURRENT_YEAR = 2020
 def getGameResults(team1, team2, week):
     weekly_games = (Boxscores(week, CURRENT_YEAR)).games
     for game_week in weekly_games:
-        for game in game_week[game_week]:
+        for game in weekly_games[game_week]:
             if game['away_abbr'] == team1 and game['home_abbr'] == team2:
                 return game
 
